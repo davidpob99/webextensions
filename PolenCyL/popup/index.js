@@ -20,9 +20,8 @@ function obtener_datos(id) {
         var datos = xml2json(data);  
         datos = datos.replace('undefined', '');
         var json = JSON.parse(datos);    
-        console.log(json.document.date);
-        document.getElementById('fecha').innerHTML = "Fecha de los datos: " + json.document.date;        
-        console.log(json);        
+        console.log(json.document.date);                
+        // console.log(json);        
         var root = json.document.list.element.estacion[id];
         console.log(root.nombre);
         var longitud = root.tipo_polinico.length;

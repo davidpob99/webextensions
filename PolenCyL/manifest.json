@@ -1,7 +1,7 @@
 {
   "manifest_version" : 2,
   "name" : "PolenCyL",
-  "version" : "1.0.0",
+  "version" : "1.0.1",
   "description" : "Consulte los valores actuales y su previsiones de distintos tipos de polenes en la comundad autónoma de Castilla y León (España). Fuente de los datos: Junta de Castilla y León.",
   "homepage_url" : "http://davidpob99.github.io/webextensions/",
   "icons" : {    
