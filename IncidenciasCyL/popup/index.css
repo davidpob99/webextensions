@@ -1,0 +1,52 @@
+.tarjeta.mdl-card {
+  width: inherit;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+
+.mdl-card__subtitle-text{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+.mdl-card__title-text{
+  padding: 15px;
+}
+
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+
+*{
+  font-family:'Roboto', arial, sans-serif;
+}
+
+select {  
+  border: 1px solid #ff6600ff;
+  background: transparent;  
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ff6600ff;  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    } 
+}
