@@ -1,8 +1,8 @@
 {
   "manifest_version" : 2,
   "name" : "IncidenciasCyL",
-  "version" : "1.0.0",
-  "description" : "Aplicación para visualizar de forma sencilla las incidencias en las carreteras de Castilla y León.",
+  "version" : "1.0.1",
+  "description" : "Aplicación para visualizar de forma sencilla las incidencias en las carreteras de Castilla y León. Fuente de los datos: Junta de Castilla y León.",
   "homepage_url" : "http://davidpob99.github.io/IncidenciasCyL/",
   "icons" : {    
     "48" : "icons/icon-48.png",

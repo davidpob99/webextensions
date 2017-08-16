@@ -1,27 +1,3 @@
-.tarjeta.mdl-card {
-  width: inherit;
-  padding-bottom: 10px;
-  margin: 10px;
-}
-
-.mdl-card__subtitle-text{
-  padding-left: 15px;
-  padding-right: 15px;
-  font-weight: bold;
-}
-
-.mdl-card__title-text{
-  padding: 15px;
-}
-
-.layout-transparent .mdl-layout__header,
-.layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
-}
-
-
 *{
   font-family:'Roboto', arial, sans-serif;
 }
@@ -49,4 +25,10 @@ select::-ms-expand {
         background:none\9;
         padding: 5px\9;
     } 
+}
+
+.tarjeta {
+  border: 3px solid #ff6600ff;
+  padding: 10px;
+   box-shadow: 5px 5px grey;
 }

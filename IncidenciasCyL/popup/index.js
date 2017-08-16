@@ -25,23 +25,20 @@ function obtener_datos(id) {
         if(data.incidencias[i].Provincia == id){
           var tarjetas = document.getElementById("tarjetas");
           var tarjeta = document.createElement("DIV");
-          tarjeta.setAttribute("class", "tarjeta mdl-card mdl-shadow--2dp");
+          tarjeta.setAttribute("class", "tarjeta");
           tarjeta.setAttribute("id", "tarjeta");
           tarjetas.appendChild(tarjeta);
 
-          var titulotarjeta = document.createElement("H2");
-          titulotarjeta.setAttribute("class", "mdl-card__title-text");
+          var titulotarjeta = document.createElement("H2");          
           titulotarjeta.setAttribute("id", "titulo");
           titulotarjeta.appendChild(document.createTextNode(data.incidencias[i].Via));
           tarjeta.appendChild(titulotarjeta);
 
-          var subtitulotarjeta = document.createElement("DIV");
-          subtitulotarjeta.setAttribute("class", "mdl-card__subtitle-text");
+          var subtitulotarjeta = document.createElement("DIV");          
           subtitulotarjeta.appendChild(document.createTextNode(data.incidencias[i].Tramo));
           tarjeta.appendChild(subtitulotarjeta);
 
-          var cuerpotarjeta = document.createElement("DIV");
-          cuerpotarjeta.setAttribute("class", "mdl-card__supporting-text");          
+          var cuerpotarjeta = document.createElement("DIV");                 
 
           var tipo = document.createElement("P");
           tipo.appendChild(document.createTextNode("Tipo de alerta: " + data.incidencias[i].Tipo))
@@ -69,8 +66,7 @@ function obtener_datos(id) {
           enlacetarjeta.setAttribute("class", "mdl-card__actions mdl-card--border");
           tarjeta.appendChild(enlacetarjeta);
 
-          var enlacetarjeta2 = document.createElement("A");
-          enlacetarjeta2.setAttribute("class", "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect");
+          var enlacetarjeta2 = document.createElement("A");          
           enlacetarjeta2.setAttribute("href", data.incidencias[i].MasInfo);
           enlacetarjeta2.innerHTML = "Más información";
           tarjeta.appendChild(enlacetarjeta2);
