@@ -1,0 +1,16 @@
+{
+  "manifest_version" : 2,
+  "name" : "IncidenciasEuskadi",
+  "version" : "1.0.0",
+  "description" : "Aplicación para visualizar de forma sencilla las incidencias en las carreteras del País Vasco. Fuente de los datos: Gobierno Vasco.",
+  "homepage_url" : "http://davidpob99.github.io/IncidenciasEuskadi/",
+  "icons" : { 
+    "128" : "icons/icon.svg" 
+  },  
+  "permissions" : ["notifications","contextMenus","clipboardWrite","activeTab","storage", "<all_urls>"],
+  "browser_action" : {
+    "default_title" : "IncidenciasEuskadi",
+    "default_icon" : "icons/icon.svg",
+    "default_popup" : "popup/index.html"
+  }
+}
