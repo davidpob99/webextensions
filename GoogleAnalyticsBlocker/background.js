@@ -1,4 +1,3 @@
-
   var pattern = "*://www.google-analytics.com/*";
   function block(requestDetails) {
     console.log("Blocking Google Analytics");
