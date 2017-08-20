@@ -1,26 +1,26 @@
 var select = document.getElementById("municipio");
 select.addEventListener("change",function(){
-  var id = select.value;  
+  var id = select.value;
   obtener_datos(id);
 });
 
-window.addEventListener("load",function(){  
-  var id = localStorage.getItem("id"); 
+window.addEventListener("load",function(){
+  var id = localStorage.getItem("id");
   select.value = id;
   obtener_datos(id);
 });
 
-function obtener_datos(id) {  
+function obtener_datos(id) {
   var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.trafikoa.eus/servicios/IncidenciasTDT/IncidenciasTrafikoTDTGeo");
-    xhr.addEventListener("load",function(){        
-        var data = xhr.responseXML; 
-        var datos = xml2json(data);  
+    xhr.addEventListener("load",function(){
+        var data = xhr.responseXML;
+        var datos = xml2json(data);
         datos = datos.replace('undefined', '');
         var json = JSON.parse(datos);
-        console.log(json);  
-        document.getElementById("tarjetas").innerHTML="";        
-        console.log("Completado sin errores");              
+        // console.log(json);
+        document.getElementById("tarjetas").innerHTML="";
+        // console.log("Completado sin errores");
         for(var i in json.raiz.incidenciaGeolocalizada) {
           if(json.raiz.incidenciaGeolocalizada[i].matricula == id){
             var tarjetas = document.getElementById("tarjetas");
@@ -30,26 +30,26 @@ function obtener_datos(id) {
             tarjetas.appendChild(tarjeta);
 
             if(json.raiz.incidenciaGeolocalizada[i].carretera != null){
-                var titulotarjeta = document.createElement("H2");          
+                var titulotarjeta = document.createElement("H2");
                 titulotarjeta.setAttribute("id", "titulo");
                 titulotarjeta.appendChild(document.createTextNode(json.raiz.incidenciaGeolocalizada[i].carretera));
                 tarjeta.appendChild(titulotarjeta);
             }
-            
+
             if(json.raiz.incidenciaGeolocalizada[i].poblacion != null){
-                var subtitulotarjeta = document.createElement("DIV");          
+                var subtitulotarjeta = document.createElement("DIV");
                 subtitulotarjeta.appendChild(document.createTextNode(json.raiz.incidenciaGeolocalizada[i].poblacion));
                 tarjeta.appendChild(subtitulotarjeta);
             }
 
-            var cuerpotarjeta = document.createElement("DIV");                 
+            var cuerpotarjeta = document.createElement("DIV");
 
             if(json.raiz.incidenciaGeolocalizada[i].tipo != null){
                 var tipo = document.createElement("P");
                 tipo.appendChild(document.createTextNode("Tipo de alerta: " + json.raiz.incidenciaGeolocalizada[i].tipo))
                 cuerpotarjeta.appendChild(tipo);
-            }   
-            
+            }
+
             if(json.raiz.incidenciaGeolocalizada[i].causa != null && json.raiz.incidenciaGeolocalizada[i].causa != "Desconocida"){
                 var causa = document.createElement("P");
                 causa.appendChild(document.createTextNode("Causa: " + json.raiz.incidenciaGeolocalizada[i].causa))
@@ -63,7 +63,7 @@ function obtener_datos(id) {
                 cuerpotarjeta.appendChild(calzada);
             }
 
-            if(json.raiz.incidenciaGeolocalizada[i].nivel != null && json.raiz.incidenciaGeolocalizada[i].nivel != "T: Abierto C: Abierto A: Abierto"){
+            if(json.raiz.incidenciaGeolocalizada[i].nivel != null){
                 var nivel = document.createElement("P");
                 nivel.appendChild(document.createTextNode("Nivel: " + json.raiz.incidenciaGeolocalizada[i].nivel))
                 cuerpotarjeta.appendChild(nivel);
@@ -83,10 +83,10 @@ function obtener_datos(id) {
 
             tarjeta.appendChild(cuerpotarjeta);
 
-            
+
             var espacio =  document.createElement("BR");
             tarjetas.appendChild(espacio);
-            localStorage.setItem("id",id); 
+            localStorage.setItem("id",id);
 
           }}});
     xhr.send();
