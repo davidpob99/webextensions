@@ -1,0 +1,20 @@
+{
+  "description": "Block Google Analytics from any website you visit.",
+  "homepage_url": "https://github.com/davidpob99/webextensions",
+  "manifest_version": 2,
+  "name": "Google Analytics Blocker",
+  "permissions": [
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "icons": {
+      "128": "icon.svg"
+  },
+  "version": "1.0.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}
