@@ -1,0 +1,34 @@
+*{
+  font-family:'Roboto', arial, sans-serif;
+}
+
+select {  
+  border: 1px solid #F76D22;
+  background: transparent;  
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #F76D22;  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    } 
+}
+
+.tarjeta {
+  border: 3px solid #F76D22;
+  padding: 10px;
+   box-shadow: 5px 5px grey;
+}

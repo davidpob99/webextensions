@@ -1,0 +1,16 @@
+{
+  "manifest_version" : 2,
+  "name" : "O-Calendar",
+  "version" : "0.0.1",
+  "description" : "See next orienteering competitions around the world",
+  "homepage_url" : "http://davidpob99.github.io/",
+  "icons" : { 
+    "128" : "icons/icon.svg" 
+  },  
+  "permissions" : ["<all_urls>"],
+  "browser_action" : {
+    "default_title" : "O-Calendar",
+    "default_icon" : "icons/icon.svg",
+    "default_popup" : "popup/index.html"
+  }
+}
