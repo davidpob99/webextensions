@@ -1,11 +1,11 @@
-  var pattern = "*://www.google-analytics.com/*";
+  var pattern = ["*://www.google-analytics.com/*", "*://ssl.google-analytics.com/*"];
   function block(requestDetails) {
-    console.log("Blocking Google Analytics");
+    // console.log("Blocking Google Analytics");
     return {cancel: true};
   }
 
   browser.webRequest.onBeforeRequest.addListener(
     block,
-    {urls:[pattern]},
+    {urls: pattern},
     ["blocking"]
   );
