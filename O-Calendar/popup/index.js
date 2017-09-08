@@ -1,5 +1,9 @@
-var j, k, l;
+var j, k, l, t;
 const url = "http://orienteeringonline.net/"
+const e_name = "http://orienteeringonline.net/ListOfEntries.aspx?ListType=1&CompetitionID=";
+const e_class = "http://orienteeringonline.net/ListOfEntries.aspx?ListType=2&CompetitionID=";
+const e_club = "http://orienteeringonline.net/ListOfEntries.aspx?ListType=3&CompetitionID=";
+const e_country = "http://orienteeringonline.net/ListOfEntries.aspx?ListType=4&CompetitionID=";
 l = 0;
 
 window.addEventListener("load",function(){    
@@ -14,8 +18,7 @@ function obtener_datos() {
       // console.log("Completado sin errores");
       // console.log(data);  
       for(var i = 0 ; i < data.competitions.length/3 ; i+=3) {
-          l++;
-          j = i+1;
+	      j = i+1;
           k = i+2;
           var tarjetas = document.getElementById("tarjetas");
           var tarjeta = document.createElement("DIV");
@@ -45,12 +48,51 @@ function obtener_datos() {
           tarjeta.appendChild(enlacetarjeta);
 
           var enlacetarjeta2 = document.createElement("A");          
-          enlacetarjeta2.setAttribute("href", url + data.links[l]);
-          enlacetarjeta2.innerHTML = "More details";
+          enlacetarjeta2.setAttribute("href", url + data.links[l]);          
           tarjeta.appendChild(enlacetarjeta2);
+          
+          var boton = document.createElement("BUTTON");
+          boton.innerHTML = "More details";
+          enlacetarjeta2.appendChild(boton);
+          
+          t = data.links[l].substr(data.links[l].length - 4);  
+          
+          var enlacetarjeta3 = document.createElement("A");          
+          enlacetarjeta3.setAttribute("href", e_name + t);          
+          tarjeta.appendChild(enlacetarjeta3);
+          
+          var boton = document.createElement("BUTTON");
+          boton.innerHTML = "Entries by name";
+          enlacetarjeta3.appendChild(boton);
+          
+          var enlacetarjeta4 = document.createElement("A");          
+          enlacetarjeta4.setAttribute("href", e_class + t);
+          tarjeta.appendChild(enlacetarjeta4);
+          
+          var boton = document.createElement("BUTTON");
+          boton.innerHTML = "Entries by class";
+          enlacetarjeta4.appendChild(boton);
+          
+          var enlacetarjeta5 = document.createElement("A");          
+          enlacetarjeta5.setAttribute("href", e_club + t);
+          tarjeta.appendChild(enlacetarjeta5);
+          
+          var boton = document.createElement("BUTTON");
+          boton.innerHTML = "Entries by club";
+          enlacetarjeta5.appendChild(boton);
+          
+          var enlacetarjeta6 = document.createElement("A");          
+          enlacetarjeta6.setAttribute("href", e_country + t);          
+          tarjeta.appendChild(enlacetarjeta6);
+          
+          var boton = document.createElement("BUTTON");
+          boton.innerHTML = "Entries by country";
+          enlacetarjeta6.appendChild(boton);
 
           var espacio =  document.createElement("BR");
-          tarjetas.appendChild(espacio);        
+          tarjetas.appendChild(espacio);
+   
+	  l++;     
       }       
     })
     .fail(function() {

@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+
 *{
-  font-family:'Roboto', arial, sans-serif;
+  font-family:'Roboto';
 }
 
 select {  
@@ -30,5 +35,5 @@ select::-ms-expand {
 .tarjeta {
   border: 3px solid #F76D22;
   padding: 10px;
-   box-shadow: 5px 5px grey;
+   box-shadow: 5px 5px grey;   
 }
