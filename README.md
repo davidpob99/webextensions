@@ -15,3 +15,12 @@ All of this extensions are published in [Mozilla Add-Ons](https://addons.mozilla
 ## Other Browsers
 
 You can clone this repository and follow [this guide](https://davidpob99.github.io/otros/instalar-extensiones-desempaquetadas)
+
+## Third-party Licenses
+
+### Icons
+
+Copyright (c) 2014, Google (http://www.google.com/design/)
+uses the license at https://github.com/google/material-design-icons/blob/master/LICENSE
+Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/),
+with Reserved Font Name Material Design Icons.
