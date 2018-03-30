@@ -6,13 +6,13 @@
 
 A collection of WebExtensions
 
-# Installation
+## Installation
 
-## Mozilla Firefox
+### Mozilla Firefox
 
 All of this extensions are published in [Mozilla Add-Ons](https://addons.mozilla.com/)
 
-## Other Browsers
+### Other Browsers
 
 You can clone this repository and follow [this guide](https://davidpob99.github.io/otros/instalar-extensiones-desempaquetadas)
 
@@ -23,5 +23,5 @@ You can clone this repository and follow [this guide](https://davidpob99.github.
 Copyright (c) 2014, Google (http://www.google.com/design/)
 uses the license at https://github.com/google/material-design-icons/blob/master/LICENSE
 
-Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/),
+Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/)
 uses the license at https://github.com/Templarian/MaterialDesign/blob/master/license.txt
