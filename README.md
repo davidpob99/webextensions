@@ -24,4 +24,4 @@ Copyright (c) 2014, Google (http://www.google.com/design/)
 uses the license at https://github.com/google/material-design-icons/blob/master/LICENSE
 
 Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/)
-uses the license at https://github.com/Templarian/MaterialDesign/blob/master/license.txt
+uses the license at https://github.com/Templarian/MaterialDesign/blob/master/LICENSE
