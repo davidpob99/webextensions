@@ -4,7 +4,7 @@
     @version 1.2.1 28/03/2018
 */
 
-var pattern = ["*://www.google-analytics.com/*", "*://ssl.google-analytics.com/*"];
+var pattern = ["*://www.google-analytics.com/*", "*://ssl.google-analytics.com/*", "*://stats.g.doubleclick.net/*", "*/ga-lite.min.js", "*://www.googletagmanager.com/gtag/js*"];
 var activate;
 window.addEventListener("load",function(){
 	browser.runtime.getPlatformInfo().then(function(item){
