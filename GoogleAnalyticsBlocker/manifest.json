@@ -2,7 +2,7 @@
   "description": "Block Google Analytics from any website you visit.",
   "homepage_url": "https://github.com/davidpob99/webextensions",
   "manifest_version": 2,
-  "author": "David Población Criado",
+  "author": "David Población",
   "name": "Google Analytics Blocker",
   "permissions": [
     "management",
@@ -14,7 +14,7 @@
   "icons": {
       "128": "icons/icon.svg"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "background": {
     "scripts": ["background.js"]
   },
